@@ -40,7 +40,7 @@ function AddActivity({ show, handleClose, addActivity }) {
       deadline: activityData.deadline
     };
     addActivity(newActivity);
-    handleClose();
+    handleClose("activity");
 };
   
 const setField = (name, val) => {
@@ -74,7 +74,7 @@ const setField = (name, val) => {
   
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={() => handleClose("activity")}>
       <Modal.Header closeButton>
         <Modal.Title>Add New Activity</Modal.Title>
       </Modal.Header>
