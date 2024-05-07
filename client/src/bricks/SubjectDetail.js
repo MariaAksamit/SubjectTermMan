@@ -7,11 +7,13 @@ import moment from 'moment';
 import AddActivity from "./AddActivity";
 import AddSubjectTerm from "./AddSubjectTerm";
 import ActivityDetail from "./ActivityDetail";
+import StudentDetail from "./StudentDetail"
 
 function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
   const navigate = useNavigate();
   const { users, user, isLoggedIn } = useContext(UserContext);
   const [selectedActivity, setSelectedActivity] = useState(null);
+  const [selectedStudent, setSelectedStudent] = useState(null);
   const [selectedSubjectTerm, setSelectedSubjectTerm] = useState(null);
   const [showAA, setShowAA] = useState(false);
   const [showAST, setShowAST] = useState(false);
@@ -25,6 +27,12 @@ function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
         setShowAA(true); 
         break;
       case "subjectTerm":
+        setShowAST(true); 
+        break;
+      case "student":
+        setShowAST(true); 
+        break;
+      case "addActivity":
         setShowAST(true); 
         break;
       default:
@@ -71,7 +79,8 @@ function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
   };
 
  // Pole so študentami priradenými k vybranému subjectTerm s ich známkami
-  const enrolledUsers = selectedSubjectTerm ? selectedSubjectTerm.studentList?.map(student => {
+ const enrolledUsers = selectedSubjectTerm ? selectedSubjectTerm.studentList?.map(student => {
+  if (student.studentId.startsWith("st")) {
     const user = users.find(user => user.id === student.studentId);
     if (user) {
       return {
@@ -83,7 +92,10 @@ function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
     } else {
       return null; 
     }
-  }).filter(student => student !== null) : [];
+  } else {
+    return null;
+  }
+}).filter(student => student !== null) : [];
   
   const handleSubjectTermClick = (term) => {
     setSelectedSubjectTerm(term);
@@ -134,11 +146,7 @@ function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
           ...prevTerm,
           studentList: updatedStudentList
         }));
-      }
-    }
-    
-    
-    }
+      }}}
   }, [subjDetail]);
 
   useEffect(() => {
@@ -329,9 +337,10 @@ function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
                 <td>{calculateTotalAchievedScore(student.id, selectedSubjectTerm)}</td>
                 <td>{student.grade}</td>
                 <td>
-                  <Button
+                <Button
                     variant="outline-primary"
                     size="sm"
+                    onClick={() => setSelectedStudent(student)}
                   >
                     {"<"} 
                   </Button>
@@ -402,6 +411,12 @@ function SubjectDetail({ subjDetail, subjectTermL, activityL }) {
             activity={selectedActivity}
             subjectTerm={selectedSubjectTerm}
             onClose={() => setSelectedActivity(null)}
+          />
+        )}
+        {selectedStudent && (
+          <StudentDetail
+            selectedStudent={selectedStudent}
+            onClose={() => setSelectedStudent(null)}
           />
         )}
       </div>

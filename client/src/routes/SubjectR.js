@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import SubjectList from "../bricks/SubjectList"
+import SubjContext from "../SubjProvider";
 
 
 function SubjectR() {
-  const subjectL = [
+  const {subjectL, subjectTermL, activityL} = useContext(SubjContext);
+
+  /* const subjectL = [
     {
       "id": "MA-BC",
       "name": "Mathematic Analysis",
       "credits": 6,
-      "supervisor": "Adam Smith",
+      "supervisor": "Marek Novotný",
       "goal": "Mathematic learning",
       "degree": "Bc",
       "language": "cz",
@@ -243,7 +246,7 @@ function SubjectR() {
     "description": "Test from issues 1-2", 
     "maxScore": 25, 
     "minScore": 15, 
-    "deadline": "2024-04-150T23:59:59", 
+    "deadline": "2024-04-15T23:59:59", 
   },
   {
     "id": "1845699", 
@@ -281,7 +284,7 @@ function SubjectR() {
     "minScore": 40, 
     "deadline": "2024-05-30T23:59:59", 
   }
-];
+]; */
 
   return (
     <div>
