@@ -3,14 +3,24 @@ import { useNavigate } from "react-router-dom";
 import { Table, Navbar, Form, Button } from "react-bootstrap";
 import Icon from "@mdi/react";
 import { mdiMagnify, mdiPlus } from "@mdi/js";
+import AddSubject from "./AddSubject";
 
 import styles from "../styles/styles.css";
 
-export default function SubjectList ({ subjectL, subjectTermL, activityL }) {
+export default function SubjectList ({ subjectL, subjectTermL, activityL, createSubject }) {
   const navigate = useNavigate();
   const [searchBy, setSearchBy] = useState("");
   const [sortBy, setSortBy] = useState(null);
   const [sortDirection, setSortDirection] = useState("asc");
+  const [show, setShow] = useState(false);
+
+  const handleOpen = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  const handleAddSubject = (newSubject) => {
+    createSubject(newSubject)
+    setShow(false);
+  };
 
   const handleSubjectClick = (selectedSubject) => {
     navigate(`/subjDetail/${selectedSubject.id}`, {state: {selectedSubject, subjectTermL, activityL}});
@@ -88,6 +98,7 @@ return (
                 <Button
                   style={{ marginRight: "8px" }}
                   variant="success"
+                  onClick={handleOpen}
                 >
                 <Icon size={1} path={mdiPlus} />
                 </Button>
@@ -100,7 +111,6 @@ return (
 <Table striped bordered>
   <thead>
     <tr>
-      <th onClick={() => handleSort("id")}>ID</th>
       <th onClick={() => handleSort("name")}>Subject</th>
       <th onClick={() => handleSort("credits")}>Credits</th>
       <th onClick={() => handleSort("degree")}>Degree</th>
@@ -113,12 +123,11 @@ return (
     {filteredSubjectL.map((subject, index) => {
       return (
         <tr key={index}>
-          <td> {subject.id} </td>
-          <td> {subject.name} </td>
+          <td style={{ textAlign: "left" }}> {subject.name} </td>
           <td> {subject.credits} </td>
           <td> {subject.degree} </td>
           <td> {subject.supervisor} </td>
-          <td> {subject.goal} </td>
+          <td style={{ textAlign: "left" }}> {subject.goal} </td>
           <td> 
             <Button
               variant="outline-primary"
@@ -133,6 +142,11 @@ return (
     })}
   </tbody>
 </Table>
+<AddSubject
+  show={show}
+  handleClose={handleClose}
+  addSubject={handleAddSubject}
+/>
   </div>
 </div>
 );

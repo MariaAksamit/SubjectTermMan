@@ -1,20 +1,26 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useContext } from "react";
 import SubjectDetail from "../bricks/SubjectDetail"
+import SubjContext from "../SubjProvider";
+import { useParams } from "react-router-dom";
 
 
 function SubjectR() {
-    const location = useLocation();
-    const { selectedSubject, subjectTermL, activityL } = location.state;
+  const { subjectL, subjectTermL, activityL, updateSubjectTerm, createSubjectTerm, createActivity,deleteActivity } = useContext(SubjContext);
+  const { id } = useParams();
+  const selectedSubject = subjectL.find(subject => subject.id === id);
 
-  return (
-    <div>
-      <SubjectDetail 
-        subjDetail={selectedSubject}
-        subjectTermL={subjectTermL}
-        activityL={activityL}
-      />
-    </div>
+    return (
+      <div>
+        <SubjectDetail
+          subjDetail={selectedSubject}
+          subjectTermL={subjectTermL}
+          activityL={activityL}
+          updateSubjectTerm={updateSubjectTerm}
+          createSubjectTerm={createSubjectTerm}
+          createActivity={createActivity}
+          deleteActivity={deleteActivity}
+        />
+      </div>
     );
 };
 
