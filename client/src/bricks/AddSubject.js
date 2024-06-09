@@ -13,32 +13,32 @@ function AddSubject({ show, handleClose, addSubject }) {
     if (description.length < 1 || description.length > 1000) return false;
     if (language === "" || degree === "") return false;
     if (isNaN(credits)) return false;
-    if (credits < 0 || credits > 10) return false;
+    if (credits < 0 || credits > 100) return false;
     return true;
   };
 
   const [subjectData, setSubjectData] = useState({
     name: "",
-    credits: 1,
+    credits: "",
     supervisor: "",
     goal: "",
     degree: "",
     language:  "",
     description:  "",
-    school: "",
+    school: "Union University",
   });
 
   useEffect(() => {
     if (show) {
       setSubjectData({
         name: '',
-        credits: 1,
+        credits: "",
         degree: '',
         supervisor: '',
         goal: '',
         language: '',
-        school: '',
-        description: ''
+        description: '',
+        school: 'Union University'
       });
       setValidated(false);
     }
@@ -150,7 +150,7 @@ return (
               {/* <option value="Ing">Engineer</option> */}
             </Form.Control>
             <Form.Control.Feedback type="invalid"> 
-              The degree must be seleted.
+              The degree must be selected.
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="formCredits">
@@ -160,10 +160,10 @@ return (
               name="credits"
               value={subjectData.credits}
               onChange={(e) => setField("credits", e.target.value)}
-              isInvalid={validated && (isNaN(subjectData.credits) || subjectData.credits < 1 || subjectData.credits > 10)}
+              isInvalid={validated && (isNaN(subjectData.credits) || subjectData.credits < 0 || subjectData.credits > 100)}
             />
             <Form.Control.Feedback type="invalid"> 
-              The credits must be a number between 1-10.
+              The credits must be a number between 0-100.
             </Form.Control.Feedback>
           </Form.Group>
         <Form.Group controlId="formSchool">
@@ -193,7 +193,7 @@ return (
               <option value="en">English</option>
             </Form.Control>
             <Form.Control.Feedback type="invalid"> 
-              The language must be seleted.
+              The language must be selected.
             </Form.Control.Feedback>
           </Form.Group>
         </Form>
