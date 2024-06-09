@@ -6,7 +6,7 @@
         "degree": "",
         "language": "",
         "email": "igor.hnizdo@example.com",
-        "password": "P@ssw0rd"
+        "password": "heslo"
     },
     {
         "id": "ad-4123-4888",
@@ -15,7 +15,7 @@
         "degree": "",
         "language": "",
         "email": "admin@example.com",
-        "password": "Adm1nP@ss"
+        "password": "heslo"
     },
     {
         "id": "st-6824-6544",
@@ -24,7 +24,7 @@
         "degree": "Bc",
         "language": "en",
         "email": "sarah.walters@example.com",
-        "password": "Walters7"
+        "password": "heslo"
     },
     {
         "id": "st-9267-3572",
@@ -33,7 +33,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "katerina.zemanova@example.com",
-        "password": "Z3man0va"
+        "password": "heslo"
     },
     {
         "id": "st-9155-9119",
@@ -42,7 +42,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "mikulas.hruby@example.com",
-        "password": "Hruby123"
+        "password": "heslo"
     },
     {
         "id": "st-6580-7562",
@@ -51,7 +51,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "aneta.mrazkova@example.com",
-        "password": "Mr4zk0va"
+        "password": "heslo"
     },
     {
         "id": "st-9155-9132",
@@ -60,7 +60,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "jana.sikolova@example.com",
-        "password": "S1kolova"
+        "password": "heslo"
     },
     {
         "id": "st-6567-9443",
@@ -69,7 +69,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "jitka.vranova@example.com",
-        "password": "Vranova7"
+        "password": "heslo"
     },
     {
         "id": "st-4357-8327",
@@ -78,7 +78,7 @@
         "degree": "Bc",
         "language": "en",
         "email": "amanda.plummer@example.com",
-        "password": "Plummer7"
+        "password": "heslo"
     },
     {
         "id": "st-9611-9860",
@@ -87,7 +87,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "jiri.herman@example.com",
-        "password": "Herman12"
+        "password": "heslo"
     },
     {
         "id": "st-6170-3245",
@@ -96,7 +96,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "adela.kramarova@example.com",
-        "password": "Kr4marova"
+        "password": "heslo"
     },
     {
         "id": "st-9467-5028",
@@ -105,7 +105,7 @@
         "degree": "Bc",
         "language": "en",
         "email": "jane.hill@example.com",
-        "password": "Hill567"
+        "password": "heslo"
     },
     {
         "id": "st-9467-5027",
@@ -114,7 +114,7 @@
         "degree": "Bc",
         "language": "en",
         "email": "caroline.benedict@example.com",
-        "password": "Benedict7"
+        "password": "heslo"
     },
     {
         "id": "st-7846-1627",
@@ -123,7 +123,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "petra.mlejnkova@example.com",
-        "password": "Mlejnkova7"
+        "password": "heslo"
     },
     {
         "id": "st-3847-6842",
@@ -132,7 +132,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "karel.janak@example.com",
-        "password": "Janak123"
+        "password": "heslo"
     },
     {
         "id": "st-9155-6693",
@@ -141,7 +141,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "barbora.krausova@example.com",
-        "password": "Krausova7"
+        "password": "heslo"
     },
     {
         "id": "st-2341-5340",
@@ -150,7 +150,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "jan.svoboda@example.com",
-        "password": "Svoboda7"
+        "password": "heslo"
     },
     {
         "id": "st-5119-6693",
@@ -159,7 +159,7 @@
         "degree": "Mgr",
         "language": "en",
         "email": "ian.mccoy@example.com",
-        "password": "Mccoy77"
+        "password": "heslo"
     },
     {
         "id": "st-4023-4412",
@@ -168,7 +168,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "matej.matousek@example.com",
-        "password": "Matousek7"
+        "password": "heslo"
     },
     {
         "id": "st-6943-1948",
@@ -177,7 +177,7 @@
         "degree": "Mgr",
         "language": "en",
         "email": "phil.jameson@example.com",
-        "password": "James0n7"
+        "password": "heslo"
     },
     {
         "id": "st-1066-4394",
@@ -186,7 +186,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "krystof.stepanek@example.com",
-        "password": "Stepanek7"
+        "password": "heslo"
     },
     {
         "id": "st-6957-3533",
@@ -195,7 +195,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "vera.horakova@example.com",
-        "password": "Horak0va"
+        "password": "heslo"
     },
     {
         "id": "st-3871-9773",
@@ -204,7 +204,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "radim.gazda@example.com",
-        "password": "Gazda123"
+        "password": "heslo"
     },
     {
         "id": "st-3578-3468",
@@ -213,7 +213,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "milos.zemak@example.com",
-        "password": "Zemak777"
+        "password": "heslo"
     },
     {
         "id": "st-3418-6548",
@@ -222,7 +222,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "roman.pokorny@example.com",
-        "password": "Pok0rny"
+        "password": "heslo"
     },
     {
         "id": "st-3357-6245",
@@ -231,7 +231,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "andrea.cerna@example.com",
-        "password": "Cerna123"
+        "password": "heslo"
     },
     {
         "id": "st-3875-1698",
@@ -240,7 +240,7 @@
         "degree": "Mgr",
         "language": "en",
         "email": "robert.smith@example.com",
-        "password": "Smith123"
+        "password": "heslo"
     },
     {
         "id": "st-3215-4953",
@@ -249,7 +249,7 @@
         "degree": "Mgr",
         "language": "en",
         "email": "emily.peterson@example.com",
-        "password": "Peters0n"
+        "password": "heslo"
     },
     {
         "id": "st-5492-5764",
@@ -258,7 +258,7 @@
         "degree": "Mgr",
         "language": "cz",
         "email": "jakub.novak@example.com",
-        "password": "Novak123"
+        "password": "heslo"
     },
     {
         "id": "st-2695-7169",
@@ -267,7 +267,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "simona.kralova@example.com",
-        "password": "Kralova7"
+        "password": "heslo"
     },
     {
         "id": "st-3847-6542",
@@ -276,7 +276,7 @@
         "degree": "Bc",
         "language": "cz",
         "email": "pavla.jiraskova@example.com",
-        "password": "Jiraskova"
+        "password": "heslo"
     },
     {
         "id": "st-9834-1687",
@@ -285,6 +285,6 @@
         "degree": "Bc",
         "language": "cz",
         "email": "zdenek.janak@example.com",
-        "password": "Zden3kJan"
+        "password": "heslo"
     }
     ]

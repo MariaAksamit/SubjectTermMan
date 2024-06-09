@@ -97,5 +97,16 @@
     "language": "en",
     "description": "Marketing Research focuses on the systematic gathering, recording, and analysis of data related to marketing activities. Topics include research design, data collection methods, sampling techniques, data analysis, and interpretation. Students will also learn about ethical considerations in marketing research.",
     "school": "Union University"
+  },
+  {
+    "name": "predmet",
+    "school": "Union University",
+    "credits": "6",
+    "supervisor": "supervisor",
+    "goal": "goal",
+    "degree": "Bc",
+    "language": "cz",
+    "description": "despri",
+    "id": "7c63cde269112aeb"
   }
 ]
